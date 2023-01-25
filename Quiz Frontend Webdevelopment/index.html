@@ -1,0 +1,86 @@
+<!-- In dit bestand staat de HTML-code voor je Quiz. Je kunt deze code aanpassen. -->
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz Frontend Development - Standaardtemplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <div class="titel">
+                <h1><a href="https://dev.clow.nl/~s1156752/quiz/">The Frontend Development Quiz</a></h1>
+            </div>
+            <div class="timer" >
+                <h2 style="text-align:right;">Timer: <span id="start-timer"></span></h2>
+            </div>
+        </header>
+        <nav class="page" id="page-navigatie">
+            <H2>Begin hieronder de quiz</H2><br>
+            <button id="button-questions" class="hidden begin-de-quiz">Vragen</button><br><br>
+            <input type="text" name="karl" id="inlogveld">
+            <button id="aanmelden" class ="aanmeld-button">Aanmelden</button>
+            <p class="hidden" id= "fout-studentnummer">Je studentnummer is fout ingevoerd.</p>
+            <p class="hidden" id= "goed-studentnummer">Je studentnummer is goed ingevoerd.</p>
+            <button id="button-start" class="button-start">start</button><br><br><br><br><br><br><br><br>
+            <a class="documentation-link" href="documentation/">
+                Bekijk hier mijn documentatie
+            </a>
+            
+        </nav>
+        <main id="main-navigatie">
+            <div class="page" id="page-start">
+                <h2>Welkom bij mijn Quiz</h2>
+                <p>
+                    In deze quiz worden jullie getest op jullie kennis over het onderwerp Frontend Development.
+                    De quiz zal bestaan uit tien vragen die één voor één gevraagd zullen worden.
+                    De vraag is te beantwoorden door één van de multiple choice antwoorden te kiezen. 
+                    Let op als je eenmaal een antwoord hebt gekozen door erop te klikken, dan is dat antwoord definitief. 
+                    Je kan dus niet meer teruggaan naar vorige vragen. 
+                </p>
+            </div>
+        </main>
+        <article id= article>
+            <div class="page" id="page-questions">
+                <h2 id= vraagdisplay>1. Waar staat HTML voor?</h2><br>
+                <p>
+                    <button id="antwoord1" class="button-vragen">A. Hypertext Markup Language</button><br><br>
+                    <button id="antwoord2" class="button-vragen">B. Hipertext Markup Language</button><br><br>
+                    <button id="antwoord3" class="button-vragen">C. Hypertext Markdown Language</button><br><br>
+                    <button id="antwoord4" class="button-vragen">D. Hipertext Markdown Language</button><br><br>
+                    <button id= volgende class="volgende-vraag">Volgende</button>
+                </p>
+            </div>
+            <div class="page" id="page-einde">
+                <h2> Einde van de Quiz</h2><br>
+                <p class="hidden" id=niet-goed>Je score is niet goed opgeslagen</p><br>
+                <p class="hidden" id="wel-goed">Je score is goed opgeslagen</p><br>
+                <p>
+                    Je bent aangekomen bij het einde van mijn Quiz.<br>
+                    Ik hoop dat jullie wat hebben kunnen leren terwijl je de quiz hebt gemaakt.<br><br><br><br>
+                </p>
+            </div>
+        </article>
+        <footer>
+            <div class="footer">
+                <h2>Quiz speler: <span id="naam"></span></h2>  
+            </div>
+            <div class="footer1">
+                <h2 style="text-align:right;">punten:<span id="displayCount"></span></h2>   
+            </div>
+        </footer>
+        
+    </div>
+   
+    
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
